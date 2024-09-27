@@ -61,14 +61,14 @@ fun Js(navController: NavController) {
                 containerColor = Color.Black
             ) {
                 Row(
-                    modifier = Modifier.fillMaxWidth(), // Ocupa todo el ancho del BottomAppBar
-                    horizontalArrangement = Arrangement.Center // Distribuye el contenido centrado
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.Center
                 ){
                     Button(onClick = { navController.navigate("Inicio") },
                         modifier = Modifier
                             .height(50.dp).width(150.dp),
                         colors = ButtonDefaults.buttonColors(
-                            containerColor = Color.Yellow, // Cambia el color de fondo
+                            containerColor = Color.Yellow,
                             contentColor = Color.Black)
                     )
                     {
@@ -88,7 +88,7 @@ fun Js(navController: NavController) {
                 horizontalArrangement = Arrangement.SpaceBetween
             ) {
                 FloatingActionButton(
-                    onClick = { navController.navigate("java") }, // Navega a la pantalla de Kotlin
+                    onClick = { navController.navigate("java") },
                     containerColor = Color.Yellow,
                     contentColor = Color.Black,
                     modifier = Modifier.padding(start = 30.dp)
@@ -97,9 +97,9 @@ fun Js(navController: NavController) {
                 }
 
                 FloatingActionButton(
-                    onClick = { navController.navigate("mysql") }, // Navega a Java
-                    containerColor = Color.Yellow,  // Cambia el color del FAB
-                    contentColor = Color.Black     // Cambia el color del ícono
+                    onClick = { navController.navigate("mysql") },
+                    containerColor = Color.Yellow,
+                    contentColor = Color.Black
 
                 ) {
                     Icon(Icons.Default.ArrowForward, contentDescription = "Next")
@@ -125,7 +125,7 @@ fun Js(navController: NavController) {
                 Text(
                     textAlign = TextAlign.Center,
                     text = "¿Qué es JavaScript?",
-                    modifier = Modifier.fillMaxWidth() // Asegura que el texto ocupe todo el ancho disponible
+                    modifier = Modifier.fillMaxWidth()
                         .padding(vertical = 16.dp),
                     fontWeight = FontWeight.Bold
                 )
@@ -145,7 +145,7 @@ fun Js(navController: NavController) {
                        4. Extendido soporte en navegadores.
 
                 """.trimIndent(),
-                    textAlign = TextAlign.Justify,  // Para que el texto esté justificado
+                    textAlign = TextAlign.Justify,
                     modifier = Modifier
                         .fillMaxWidth()
                         .padding(horizontal = 45.dp)
@@ -177,7 +177,6 @@ fun Js(navController: NavController) {
 @Preview(showBackground = true)
 @Composable
 fun PreviewJs() {
-    // Simulación de un NavController. En la vista previa no se necesita navegación.
     val navController = rememberNavController()
-    Js(navController) // Llama a la función Skotlin con un navController simulado.
+    Js(navController)
 }

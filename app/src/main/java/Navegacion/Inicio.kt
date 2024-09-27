@@ -31,7 +31,7 @@ import com.example.lenguajes.R
 @Preview(showBackground = true)
 @Composable
 fun inicio() {
-    val navController = rememberNavController() // Asegúrate de inicializar el navController aquí.
+    val navController = rememberNavController()
 
     NavHost(navController = navController, startDestination = "inicio") {
         composable("inicio") {
@@ -39,9 +39,9 @@ fun inicio() {
                 modifier = Modifier
                     .fillMaxSize()
                     .padding(16.dp)
-                    .border(2.dp, Color.Black, shape = RoundedCornerShape(16.dp)) // Borde con esquinas ovaladas
-                    .padding(16.dp), // Padding interno para no pegar los elementos al borde
-                verticalArrangement = Arrangement.Center, // Centrado verticalmente
+                    .border(2.dp, Color.Black, shape = RoundedCornerShape(16.dp))
+                    .padding(16.dp),
+                verticalArrangement = Arrangement.Center,
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
                 Text(
@@ -49,15 +49,15 @@ fun inicio() {
                     fontSize = 24.sp,
                     fontWeight = FontWeight.Bold,
                     textAlign = TextAlign.Center,
-                    modifier = Modifier.padding(bottom = 8.dp) // Reducido espacio inferior
+                    modifier = Modifier.padding(bottom = 8.dp)
                 )
 
                 Image(
                     painter = painterResource(id = R.drawable.img),
                     contentDescription = "Logo",
                     modifier = Modifier
-                        .size(200.dp) // Tamaño más pequeño para minimizar espacio
-                        .padding(bottom = 8.dp) // Reducir padding entre imagen y texto
+                        .size(200.dp)
+                        .padding(bottom = 8.dp)
                 )
 
                 Text(
@@ -65,12 +65,12 @@ fun inicio() {
                     fontSize = 15.sp,
                     textAlign = TextAlign.Justify,
                     modifier = Modifier
-                        .fillMaxWidth(0.8f) // Limitar el ancho del texto para centrarlo mejor
+                        .fillMaxWidth(0.8f)
                         .padding(bottom = 30.dp)
 
                 )
 
-                // Botones para navegar a diferentes pantallas
+
                 Button(
                     onClick = { navController.navigate("kotlin") },
                     modifier = Modifier.fillMaxWidth(0.7f)

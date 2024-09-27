@@ -61,14 +61,14 @@ fun SMysql(navController: NavController) {
                 containerColor = Color(0xFFFFA500)
             ) {
                 Row(
-                    modifier = Modifier.fillMaxWidth(), // Ocupa todo el ancho del BottomAppBar
-                    horizontalArrangement = Arrangement.Center // Distribuye el contenido centrado
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.Center
                 ){
                     Button(onClick = { navController.navigate("Inicio") },
                         modifier = Modifier
                             .height(50.dp).width(150.dp),
                         colors = ButtonDefaults.buttonColors(
-                            containerColor = Color.White, // Cambia el color de fondo
+                            containerColor = Color.White,
                             contentColor = Color.Black)
                     )
                     {
@@ -88,7 +88,7 @@ fun SMysql(navController: NavController) {
                 horizontalArrangement = Arrangement.SpaceBetween
             ) {
                 FloatingActionButton(
-                    onClick = { navController.navigate("js") }, // Navega a la pantalla de Kotlin
+                    onClick = { navController.navigate("js") },
                     containerColor = Color(0xFFFFA500),
                     contentColor = Color.White,
                     modifier = Modifier.padding(start = 30.dp)
@@ -97,9 +97,9 @@ fun SMysql(navController: NavController) {
                 }
 
                 FloatingActionButton(
-                    onClick = { navController.navigate("screenc") }, // Navega a Java
-                    containerColor = Color(0xFFFFA500),  // Cambia el color del FAB
-                    contentColor = Color.White     // Cambia el color del ícono
+                    onClick = { navController.navigate("screenc") },
+                    containerColor = Color(0xFFFFA500),
+                    contentColor = Color.White
 
                 ) {
                     Icon(Icons.Default.ArrowForward, contentDescription = "Next")
@@ -124,7 +124,7 @@ fun SMysql(navController: NavController) {
                 Text(
                     textAlign = TextAlign.Center,
                     text = "¿Qué es MySQL?",
-                    modifier = Modifier.fillMaxWidth() // Asegura que el texto ocupe todo el ancho disponible
+                    modifier = Modifier.fillMaxWidth()
                         .padding(vertical = 16.dp),
                     fontWeight = FontWeight.Bold
                 )
@@ -142,7 +142,7 @@ fun SMysql(navController: NavController) {
                     3. Ofrece capacidades para transacciones y almacenamiento seguro de datos.
                     4. Gratuito y de código abierto.
                     """.trimIndent(),
-                    textAlign = TextAlign.Justify,  // Para que el texto esté justificado
+                    textAlign = TextAlign.Justify,
                     modifier = Modifier
                         .fillMaxWidth()
                         .padding(horizontal = 45.dp)
@@ -171,7 +171,6 @@ fun SMysql(navController: NavController) {
 @Preview(showBackground = true)
 @Composable
 fun PreviewMysql() {
-    // Simulación de un NavController. En la vista previa no se necesita navegación.
     val navController = rememberNavController()
-    SMysql(navController) // Llama a la función Skotlin con un navController simulado.
+    SMysql(navController)
 }

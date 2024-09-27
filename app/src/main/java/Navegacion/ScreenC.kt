@@ -58,15 +58,15 @@ fun ScreenC(navController: NavController) {
                 containerColor = Color(0xFF00599C)
             ) {
                 Row(
-                    modifier = Modifier.fillMaxWidth(), // Ocupa todo el ancho del BottomAppBar
-                    horizontalArrangement = Arrangement.Center // Distribuye el contenido centrado
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.Center
                 ){
                     Button(onClick = { navController.navigate("Inicio") },
                         modifier = Modifier
                             .height(50.dp)
                             .width(150.dp),
                         colors = ButtonDefaults.buttonColors(
-                            containerColor = Color.White, // Cambia el color de fondo
+                            containerColor = Color.White,
                             contentColor = Color.Black)
                     )
                     {
@@ -86,7 +86,7 @@ fun ScreenC(navController: NavController) {
                 horizontalArrangement = Arrangement.SpaceBetween
             ) {
                 FloatingActionButton(
-                    onClick = { navController.popBackStack() }, // Navega a la pantalla de Kotlin
+                    onClick = { navController.popBackStack() },
                     containerColor = Color(0xFF00599C),
                     contentColor = Color.White,
                     modifier = Modifier.padding(start = 30.dp)
@@ -114,7 +114,7 @@ fun ScreenC(navController: NavController) {
                 Text(
                     textAlign = TextAlign.Center,
                     text = "¿Qué es C++?",
-                    modifier = Modifier.fillMaxWidth() // Asegura que el texto ocupe todo el ancho disponible
+                    modifier = Modifier.fillMaxWidth()
                         .padding(vertical = 16.dp),
                     fontWeight = FontWeight.Bold
                 )
@@ -133,7 +133,7 @@ fun ScreenC(navController: NavController) {
                         4. Extensión del lenguaje C.
                     """.trimIndent(),
 
-                    textAlign = TextAlign.Justify,  // Para que el texto esté justificado
+                    textAlign = TextAlign.Justify,
                     modifier = Modifier
                         .fillMaxWidth()
                         .padding(horizontal = 45.dp)
@@ -162,7 +162,6 @@ fun ScreenC(navController: NavController) {
 @Preview(showBackground = true)
 @Composable
 fun PreviewScreenC() {
-    // Simulación de un NavController. En la vista previa no se necesita navegación.
     val navController = rememberNavController()
-    ScreenC(navController) // Llama a la función Skotlin con un navController simulado.
+    ScreenC(navController)
 }

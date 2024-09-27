@@ -61,14 +61,14 @@ fun SJava(navController: NavController) {
                 containerColor = Color.Yellow
             ) {
                 Row(
-                    modifier = Modifier.fillMaxWidth(), // Ocupa todo el ancho del BottomAppBar
-                    horizontalArrangement = Arrangement.Center // Distribuye el contenido centrado
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.Center
                 ){
                     Button(onClick = { navController.navigate("Inicio") },
                         modifier = Modifier
                             .height(50.dp).width(150.dp),
                         colors = ButtonDefaults.buttonColors(
-                            containerColor = Color.White, // Cambia el color de fondo
+                            containerColor = Color.White,
                             contentColor = Color.Black)
                     )
                     {
@@ -88,7 +88,7 @@ fun SJava(navController: NavController) {
                 horizontalArrangement = Arrangement.SpaceBetween
             ) {
                 FloatingActionButton(
-                    onClick = { navController.navigate("kotlin") }, // Navega a la pantalla de Kotlin
+                    onClick = { navController.navigate("kotlin") },
                     containerColor = Color.Yellow,
                     contentColor = Color.Black,
                     modifier = Modifier.padding(start = 30.dp)
@@ -97,9 +97,9 @@ fun SJava(navController: NavController) {
                 }
 
                 FloatingActionButton(
-                onClick = { navController.navigate("js") }, // Navega a Java
-                containerColor = Color.Yellow,  // Cambia el color del FAB
-                contentColor = Color.Black     // Cambia el color del ícono
+                onClick = { navController.navigate("js") },
+                containerColor = Color.Yellow,
+                contentColor = Color.Black
 
             ) {
                 Icon(Icons.Default.ArrowForward, contentDescription = "Next")
@@ -125,7 +125,7 @@ fun SJava(navController: NavController) {
                 Text(
                     textAlign = TextAlign.Center,
                     text = "¿Qué es Java?",
-                    modifier = Modifier.fillMaxWidth() // Asegura que el texto ocupe todo el ancho disponible
+                    modifier = Modifier.fillMaxWidth()
                         .padding(vertical = 16.dp),
                     fontWeight = FontWeight.Bold
                 )
@@ -144,7 +144,7 @@ fun SJava(navController: NavController) {
                        3. Usado en una amplia gama de aplicaciones (Android, servidores, aplicaciones empresariales).
                        4. Amplia comunidad y soporte de bibliotecas.
                 """.trimIndent(),
-                    textAlign = TextAlign.Justify,  // Para que el texto esté justificado
+                    textAlign = TextAlign.Justify,
                     modifier = Modifier
                         .fillMaxWidth()
                         .padding(horizontal = 45.dp)
@@ -173,7 +173,6 @@ fun SJava(navController: NavController) {
 @Preview(showBackground = true)
 @Composable
 fun PreviewJava() {
-    // Simulación de un NavController. En la vista previa no se necesita navegación.
     val navController = rememberNavController()
-    SJava(navController) // Llama a la función Skotlin con un navController simulado.
+    SJava(navController)
 }

@@ -60,14 +60,14 @@ fun Skotlin(navController: NavController) {
                 containerColor = Color.Cyan
             ) {
                 Row(
-                    modifier = Modifier.fillMaxWidth(), // Ocupa todo el ancho del BottomAppBar
-                    horizontalArrangement = Arrangement.Center // Distribuye el contenido centrado
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.Center
                 ){
                     Button(onClick = { navController.popBackStack() },
                         modifier = Modifier
                             .height(50.dp).width(150.dp),
                         colors = ButtonDefaults.buttonColors(
-                            containerColor = Color.White, // Cambia el color de fondo
+                            containerColor = Color.White,
                             contentColor = Color.Black)
                     )
                     {
@@ -81,9 +81,9 @@ fun Skotlin(navController: NavController) {
         },
         floatingActionButton = {
             FloatingActionButton(
-                onClick = { navController.navigate("java") }, // Navega a Java
-                    containerColor = Color.Cyan,  // Cambia el color del FAB
-                    contentColor = Color.White     // Cambia el color del ícono
+                onClick = { navController.navigate("java") },
+                    containerColor = Color.Cyan,
+                    contentColor = Color.White
 
             ) {
                 Icon(Icons.Default.ArrowForward, contentDescription = "Next")
@@ -107,7 +107,7 @@ fun Skotlin(navController: NavController) {
                 Text(
                     textAlign = TextAlign.Center,
                     text = "¿Qué es Kotlin?",
-                    modifier = Modifier.fillMaxWidth() // Asegura que el texto ocupe todo el ancho disponible
+                    modifier = Modifier.fillMaxWidth()
                         .padding(vertical = 16.dp),
                     fontWeight = FontWeight.Bold
                 )
@@ -126,7 +126,7 @@ fun Skotlin(navController: NavController) {
                     3. Totalmente interoperable con Java.
                     4. Soporte oficial para desarrollo de Android.
                 """.trimIndent(),
-                    textAlign = TextAlign.Justify,  // Para que el texto esté justificado
+                    textAlign = TextAlign.Justify,
                     modifier = Modifier
                         .fillMaxWidth()
                         .padding(horizontal = 45.dp)
@@ -155,9 +155,9 @@ fun Skotlin(navController: NavController) {
 @Preview(showBackground = true)
 @Composable
 fun PreviewSkotlin() {
-    // Simulación de un NavController. En la vista previa no se necesita navegación.
+
     val navController = rememberNavController()
-    Skotlin(navController) // Llama a la función Skotlin con un navController simulado.
+    Skotlin(navController)
 }
 
 
